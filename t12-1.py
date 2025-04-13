@@ -6,10 +6,10 @@ try:
     vastaus = requests.get(pyyntö)
     if vastaus.status_code == 200:
         json_vastaus = vastaus.json()
-        print("Tässä vitsi: \n")
+        print("\nTässä vitsi:")
         print(json_vastaus["value"])
 
 except requests.exceptions.RequestException as e:
     print ("Hakua ei voitu suorittaa.")
 except Exception as ex:
-    print("Tapahtui odottamaton virhe")
+    print("Tapahtui odottamaton virhe.")
